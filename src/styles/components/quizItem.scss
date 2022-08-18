@@ -1,0 +1,277 @@
+@import '../variables.scss';
+@import url('https://rsms.me/inter/inter.css');
+
+.quiz-item-wrapper {
+  font-family: 'Inter', sans-serif;
+  max-width: 460px;
+  width: 100%;
+  min-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 32px;
+
+  .devider {
+    width: 100%;
+    height: 1px;
+    background: $quiz-item-inactive-border;
+    position: absolute;
+  }
+
+  .quiz-item {
+    max-width: 300px;
+    min-width: 280px;
+    height: 70px;
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 80%;
+
+    .hex-before {
+      height: 49px;
+      width: 49px;
+      border: 1px solid $quiz-item-inactive-border;
+      transform: rotate(45deg);
+      position: absolute;
+      left: -23px;
+      background: $quiz-item-inactive-bg;
+    }
+
+    .hex-center {
+      height: 100%;
+      width: 100%;
+      border-top: 1px solid $quiz-item-inactive-border;
+      border-bottom: 1px solid $quiz-item-inactive-border;
+      background: inherit;
+      z-index: 100;
+      border-radius: 4px;
+      align-items: center;
+      display: flex;
+    }
+
+    .hex-after {
+      height: 49px;
+      width: 49px;
+      border: 1px solid $quiz-item-inactive-border;
+      transform: rotate(45deg);
+      position: absolute;
+      right: -23px;
+      background: $quiz-item-inactive-bg;
+    }
+
+    .prefix {
+      font-size: $font-size-small;
+      margin-right: 8px;
+      color: $color-blue;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: $font-size-small;
+      color: $color-black;
+    }
+
+  }
+
+
+  &:hover {
+    .devider {
+      background: $quiz-item-hover-border;
+    }
+    .quiz-item {
+      background: $quiz-item-hover-bg;
+
+      .hex-before {
+        border-color: $quiz-item-hover-border;
+        background: $quiz-item-hover-bg;
+      }
+
+      .hex-center {
+        border-color: $quiz-item-hover-border;
+        background: $quiz-item-hover-bg;
+      }
+
+      .hex-after {
+        border-color: $quiz-item-hover-border;
+        background: $quiz-item-hover-bg;
+      }
+    }
+  }
+
+  &.correct {
+    .devider {
+      background: $quiz-item-correct-border;
+    }
+    .quiz-item {
+      background: $quiz-item-correct-bg;
+
+      .hex-before {
+        border-color: $quiz-item-correct-border;
+        background: $quiz-item-correct-bg;
+      }
+
+      .hex-center {
+        border-color: $quiz-item-correct-border;
+        background: $quiz-item-correct-bg;
+      }
+
+      .hex-after {
+        border-color: $quiz-item-correct-border;
+        background: $quiz-item-correct-bg;
+      }
+    }
+  }
+
+  &.wrong {
+    .devider {
+      background: $quiz-item-wrong-border;
+    }
+    .quiz-item {
+      background: $quiz-item-wrong-bg;
+
+      .hex-before {
+        border-color: $quiz-item-wrong-border;
+        background: $quiz-item-wrong-bg;
+      }
+
+      .hex-center {
+        border-color: $quiz-item-wrong-border;
+        background: $quiz-item-wrong-bg;
+      }
+
+      .hex-after {
+        border-color: $quiz-item-wrong-border;
+        background: $quiz-item-wrong-bg;
+      }
+    }
+  }
+
+  &:active {
+    .devider {
+      background: $quiz-item-selected-border;
+    }
+    .quiz-item {
+      background: $quiz-item-selected-bg;
+
+      .hex-before {
+        border-color: $quiz-item-selected-border;
+        background: $quiz-item-selected-bg;
+      }
+
+      .hex-center {
+        border-color: $quiz-item-selected-border;
+        background: $quiz-item-selected-bg;
+      }
+
+      .hex-after {
+        border-color: $quiz-item-selected-border;
+        background: $quiz-item-selected-bg;
+      }
+    }
+  }
+
+  &.small {
+    width: 100%;
+    min-width: 200px;
+    margin-bottom: 8px;
+    pointer-events: none;
+
+    .quiz-item {
+      max-width: 180px;
+      min-width: 140px;
+      height: 40px;
+
+      .hex-before {
+        height: 29px;
+        width: 29px;
+        left: -12px;
+      }
+
+      .hex-center {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hex-after {
+        height: 29px;
+        width: 29px;
+        right: -13px;
+      }
+    }
+  }
+
+  &.result-active {
+    .devider {
+      background: $result-item-active-border;
+    }
+    .quiz-item {
+
+      .hex-before {
+        border-color: $result-item-active-border;
+      }
+
+      .hex-center {
+        border-color: $result-item-active-border;
+        .text {
+          color: $result-item-active-text;
+        }
+      }
+
+      .hex-after {
+        border-color: $result-item-active-border;
+      }
+    }
+
+  }
+
+  &.result-common {
+    .devider {
+      background: $result-item-common-border;
+    }
+    .quiz-item {
+
+      .hex-before {
+        border-color: $result-item-common-border;
+      }
+
+      .hex-center {
+        border-color: $result-item-common-border;
+        .text {
+          color: $result-item-common-text;
+        }
+      }
+
+      .hex-after {
+        border-color: $result-item-common-border;
+      }
+    }
+  }
+
+  &.result-inactive {
+    .devider {
+      background: $result-item-inactive-border;
+    }
+    .quiz-item {
+
+      .hex-before {
+        border-color: $result-item-inactive-border;
+      }
+
+      .hex-center {
+        border-color: $result-item-inactive-border;
+        .text {
+          color: $result-item-inactive-text;
+        }
+      }
+
+      .hex-after {
+        border-color: $result-item-inactive-border;
+      }
+    }
+  }
+
+}
+

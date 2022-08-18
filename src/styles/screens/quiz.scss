@@ -1,0 +1,80 @@
+@import '../variables.scss';
+@import url('https://rsms.me/inter/inter.css');
+
+.quiz-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+
+  .quiz-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 133px 80px 120px 80px;
+    background: $background-gray;
+    justify-content: space-between;
+
+    .description {
+      width: 70%;
+      font-size: $font-size-subtitle;
+      font-weight: bold;
+    }
+
+    .quiz-items {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+
+  .sidebar-container {
+    display: flex;
+    width: 370px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .mobile-menu {
+      display: block;
+      z-index: 1000;
+      font-size: 30px;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      cursor: pointer;
+    }
+
+    .sidebar-container {
+      display: none;
+      width: 100%;
+      &.active {
+        display: flex;
+        position: absolute;
+        z-index: 100;
+        background: $background-gray;
+        height: 100vh;
+      }
+    }
+
+    .quiz-wrapper {
+      padding: 133px 20px 120px 20px;
+      align-items: center;
+
+      .description {
+        text-align: center;
+      }
+      .quiz-items {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+}

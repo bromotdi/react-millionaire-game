@@ -1,0 +1,42 @@
+// fonts
+$font-size-small: 14px ;
+$font-size-medium: 18px ;
+$font-size-big: 20px ;
+$font-size-subtitle: 32px;
+$font-size-title: 56px ;
+
+//breakpoints
+$mobile: 820px;
+
+// colors
+$color-red: red ;
+$color-black: #1c1c21 ;
+$color-white: white;
+$color-blue: rgb(40, 105, 232);
+$background-gray: #e5e5e5;
+
+//buttons
+$button-inactive: rgba(40, 105, 232, 0.8);
+$button-hover: rgba(40, 105, 232, 0.6);
+$button-pressed: rgb(40, 105, 232);
+
+//quiz-item
+$quiz-item-correct-bg: #edf7ef;
+$quiz-item-correct-border: rgb(81, 179, 102);
+$quiz-item-wrong-bg: #fce8ec;
+$quiz-item-wrong-border: rgb(236, 89, 116);;
+$quiz-item-selected-bg: #e8effd;
+$quiz-item-selected-border: rgba(40, 105, 232, 0.8);
+$quiz-item-inactive-bg: #FFFFFF;
+$quiz-item-inactive-border: #D0D0D8;
+$quiz-item-hover-bg: #FFFFFF;
+$quiz-item-hover-border: rgba(40, 105, 232, 0.8);
+
+//result-item
+$result-item-common-border: #D0D0D8;
+$result-item-common-text: #1c1c21;
+$result-item-inactive-border: #D0D0D8;
+$result-item-inactive-text: #D0D0D8;
+$result-item-active-border: rgba(40, 105, 232, 0.8);
+$result-item-active-text: rgba(40, 105, 232, 0.8);
+

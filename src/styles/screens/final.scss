@@ -1,0 +1,39 @@
+@import '../variables.scss';
+@import url('https://rsms.me/inter/inter.css');
+
+.final-page-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-size: auto;
+  background-position: center;
+  background: $background-gray;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+  flex-wrap: wrap;
+
+  .final-image {
+    width: 600px;
+  }
+
+  .final-container {
+    display: flex;
+    flex-direction: column;
+
+    .final-descr {
+      font-size: $font-size-subtitle;
+      font-weight: bold;
+      color: $color-black;
+      opacity: 0.5;
+    }
+
+    .final-title {
+      font-size: $font-size-title;
+      font-weight: bold;
+      color: $color-black;
+      margin-bottom: 64px;
+    }
+  }
+}

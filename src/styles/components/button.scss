@@ -1,0 +1,25 @@
+@import '../variables.scss';
+@import url('https://rsms.me/inter/inter.css');
+
+.button {
+  width: 296px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  background: $button-inactive;
+  cursor: pointer;
+  font-size: $font-size-big;
+  font-weight: bold;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+
+  &:hover {
+    background: $button-hover;
+  }
+
+  &:active {
+    background: $button-pressed;
+  }
+}
